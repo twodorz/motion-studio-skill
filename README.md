@@ -11,12 +11,12 @@ It builds the animation, an original soundtrack (−14 LUFS) and the final mp4, 
 
 This repo is **private**, so you need a GitHub account with access:
 1. The owner invites you: **Settings → Collaborators → Add people**.
-2. Accept the invitation from the e-mail, or at https://github.com/boxingit1234/motion-studio-skill.
+2. Accept the invitation from the e-mail, or at https://github.com/twodorz/motion-studio-skill.
 
 Then open **PowerShell** (Start → type *PowerShell* → Enter) and paste this **one line**:
 
 ```powershell
-winget install --id GitHub.cli -e --accept-source-agreements --accept-package-agreements; $env:Path += ";$env:ProgramFiles\GitHub CLI"; gh auth status *> $null; if ($LASTEXITCODE) { gh auth login -w }; gh api -H "Accept: application/vnd.github.raw" /repos/boxingit1234/motion-studio-skill/contents/install.ps1 | Out-String | iex
+winget install --id GitHub.cli -e --accept-source-agreements --accept-package-agreements; $env:Path += ";$env:ProgramFiles\GitHub CLI"; gh auth status *> $null; if ($LASTEXITCODE) { gh auth login -w }; gh api -H "Accept: application/vnd.github.raw" /repos/twodorz/motion-studio-skill/contents/install.ps1 | Out-String | iex
 ```
 
 - It installs the GitHub command-line tool.

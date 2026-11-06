@@ -1,9 +1,9 @@
 # Motion Studio - one-command installer for Windows (Claude Code skill + studio folder).
 #
 # Private repo (you were invited as a collaborator): one line in PowerShell
-#   winget install --id GitHub.cli -e --accept-source-agreements --accept-package-agreements; $env:Path += ";$env:ProgramFiles\GitHub CLI"; gh auth status *> $null; if ($LASTEXITCODE) { gh auth login -w }; gh api -H "Accept: application/vnd.github.raw" /repos/boxingit1234/motion-studio-skill/contents/install.ps1 | Out-String | iex
+#   winget install --id GitHub.cli -e --accept-source-agreements --accept-package-agreements; $env:Path += ";$env:ProgramFiles\GitHub CLI"; gh auth status *> $null; if ($LASTEXITCODE) { gh auth login -w }; gh api -H "Accept: application/vnd.github.raw" /repos/twodorz/motion-studio-skill/contents/install.ps1 | Out-String | iex
 # Public repo:
-#   irm https://raw.githubusercontent.com/boxingit1234/motion-studio-skill/main/install.ps1 | iex
+#   irm https://raw.githubusercontent.com/twodorz/motion-studio-skill/main/install.ps1 | iex
 # With options: save the script as install.ps1, then  powershell -ExecutionPolicy Bypass -File .\install.ps1 -Studio D:\motion-studio
 #
 # What it does (it asks before starting):
@@ -24,7 +24,7 @@ param(
 $ErrorActionPreference = 'Stop'
 $ProgressPreference = 'Continue'
 [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
-$Repo = 'boxingit1234/motion-studio-skill'
+$Repo = 'twodorz/motion-studio-skill'
 if (-not $SkillsDir) { $SkillsDir = Join-Path $env:USERPROFILE '.claude\skills' }
 if (-not $Studio) { $Studio = Join-Path $env:USERPROFILE 'motion-studio' }
 $Total = [Diagnostics.Stopwatch]::StartNew()
